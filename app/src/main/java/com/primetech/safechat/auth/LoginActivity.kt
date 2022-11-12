@@ -1,9 +1,8 @@
 package com.primetech.safechat.auth
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.primetech.safechat.R
 import com.primetech.safechat.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
