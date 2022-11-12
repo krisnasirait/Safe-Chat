@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setOnClickListener() {
         binding.tvRegister.setOnClickListener {
-            Intent(this,MainActivity::class.java).also {
+            Intent(this,RegisterActivity::class.java).also {
                 startActivity(it)
             }
         }
