@@ -31,7 +31,6 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        checkLoginInfo()
         initVies()
         setOnClickListener()
     }
@@ -43,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setOnClickListener() {
         binding.apply {
-            btnLogin.apply {
+            btnLogin.setOnClickListener {
                 hideKeyboard()
                 validateFields()
             }

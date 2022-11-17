@@ -14,10 +14,10 @@
         android:theme="@style/Theme.SafeChat"
         tools:targetApi="31">
         <activity
-            android:name=".InboxActivity"
+            android:name=".chat.InboxActivity"
             android:exported="false" />
         <activity
-            android:name=".ChatActivity"
+            android:name=".chat.ChatActivity"
             android:exported="false" />
         <activity
             android:name=".auth.RegisterActivity"
