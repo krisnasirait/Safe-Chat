@@ -1,7 +1,5 @@
-package com.instances.safechat.db
+package com.primetech.safechat.db
 
-import androidx.room.ColumnInfo
-import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 

@@ -1,6 +1,7 @@
 package com.instances.safechat.db
 
 import androidx.room.*
+import com.primetech.safechat.db.UserEntity
 
 @Dao
 interface UserDoa {

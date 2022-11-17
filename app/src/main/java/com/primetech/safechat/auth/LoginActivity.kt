@@ -6,8 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.instances.safechat.utils.PrefManager
-import com.primetech.safechat.MainActivity
+import com.primetech.safechat.utils.PrefManager
 import com.primetech.safechat.chat.InboxActivity
 import com.primetech.safechat.databinding.ActivityLoginBinding
 

@@ -1,9 +1,8 @@
-package com.instances.safechat.utils
+package com.primetech.safechat.utils
 
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Dialog
-import android.app.ProgressDialog
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -14,10 +13,10 @@ import android.view.inputmethod.InputMethodManager
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.instances.safechat.R
-import com.instances.safechat.db.Chat
+import com.primetech.safechat.db.Chat
 import com.instances.safechat.utils.Constants.Companion.SALTVALUE
 import com.instances.safechat.utils.Constants.Companion.SECRET_KEY
+import com.primetech.safechat.R
 import java.lang.reflect.Type
 import java.nio.charset.StandardCharsets
 import java.security.InvalidAlgorithmParameterException
@@ -159,8 +158,8 @@ class BaseUtils {
         fun setDialogue(context: Context?): Dialog {
             val dialog = Dialog(context!!)
             dialog.setCancelable(false)
-            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            dialog.setContentView(R.layout.loading_dialouge);
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+            dialog.setContentView(R.layout.loading_dialouge)
             dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             return dialog
         }

@@ -3,6 +3,7 @@ package com.instances.safechat.db
 import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.primetech.safechat.db.UserEntity
 
 
 @androidx.room.Database(
