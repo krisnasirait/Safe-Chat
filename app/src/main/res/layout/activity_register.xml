@@ -36,10 +36,10 @@
         android:textColor="@color/bright_blue" />
 
     <EditText
-        android:id="@+id/etFullName"
+        android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Full name"
+        android:hint="Username"
         android:maxLines="1"
         android:textColorHint="@color/black"
         android:inputType="textCapSentences"
@@ -69,18 +69,6 @@
         android:inputType="textPassword"
         android:background="@drawable/bg_auth"
         android:textColorHint="@color/black"
-        android:layout_marginTop="15dp"
-        android:padding="10dp"/>
-
-    <EditText
-        android:id="@+id/etConfPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Confirm Password"
-        android:maxLines="1"
-        android:inputType="textPassword"
-        android:textColorHint="@color/black"
-        android:background="@drawable/bg_auth"
         android:layout_marginTop="15dp"
         android:padding="10dp"/>
 
