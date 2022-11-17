@@ -14,8 +14,8 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.primetech.safechat.db.Chat
-import com.instances.safechat.utils.Constants.Companion.SALTVALUE
-import com.instances.safechat.utils.Constants.Companion.SECRET_KEY
+import com.primetech.safechat.utils.Constants.Companion.SALTVALUE
+import com.primetech.safechat.utils.Constants.Companion.SECRET_KEY
 import com.primetech.safechat.R
 import java.lang.reflect.Type
 import java.nio.charset.StandardCharsets

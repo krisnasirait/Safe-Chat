@@ -1,10 +1,9 @@
-package com.instances.safechat.db
+package com.primetech.safechat.db
 
 import androidx.room.*
-import com.primetech.safechat.db.UserEntity
 
 @Dao
-interface UserDoa {
+interface UserDao {
     @Query("SELECT * FROM userEntity where email = :email")
     fun getUser(email:String): List<UserEntity>
 

@@ -2,8 +2,7 @@ package com.primetech.safechat.utils
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.instances.safechat.utils.Constants
-import com.instances.safechat.utils.Constants.Companion.USER_SESSION
+import com.primetech.safechat.utils.Constants.Companion.USER_SESSION
 
 class PrefManager(context: Context) {
     private val pref: SharedPreferences = context.getSharedPreferences(

@@ -1,9 +1,8 @@
-package com.instances.safechat.db
+package com.primetech.safechat.db
 
 import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.primetech.safechat.db.UserEntity
 
 
 @androidx.room.Database(
@@ -12,7 +11,7 @@ import com.primetech.safechat.db.UserEntity
     exportSchema = true
 )
 abstract class Database: RoomDatabase() {
-        abstract fun userDao(): UserDoa
+        abstract fun userDao(): UserDao
 
         companion object{
             @Volatile
