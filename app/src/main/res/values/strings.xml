@@ -14,4 +14,6 @@
     <string name="str_type_your_message_here">Type message here</string>
     <string name="str_no_recent_message">No Recent Message</string>
     <string name="str_clear">Clear</string>
+    <string name="permission_required">Permission required for app to work properly</string>
+    <string name="str_ok">OK</string>
 </resources>
