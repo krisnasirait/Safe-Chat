@@ -9,10 +9,10 @@ import com.primetech.safechat.App
 import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
+import kotlin.math.min
 
 
-
-class RealFilePath() {
+class RealFilePath {
     companion object {
         fun getFilePath(uri: Uri, context: Context): String? {
             val returnCursor = context.contentResolver.query(uri, null, null, null, null)
@@ -30,7 +30,7 @@ class RealFilePath() {
                 val maxBufferSize = 1 * 1024 * 1024
                 val bytesAvailable: Int = inputStream!!.available()
 
-                val bufferSize = Math.min(bytesAvailable, maxBufferSize)
+                val bufferSize = min(bytesAvailable, maxBufferSize)
                 val buffers = ByteArray(bufferSize)
                 while (inputStream.read(buffers).also { read = it } != -1) {
                     outputStream.write(buffers, 0, read)
