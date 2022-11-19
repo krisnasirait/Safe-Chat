@@ -14,7 +14,7 @@
         android:layout_marginHorizontal="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_10sdp">
 
-        <com.google.android.material.card.MaterialCardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/cv_document"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
@@ -58,7 +58,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
+        </androidx.cardview.widget.CardView>
 
         <RelativeLayout
             android:id="@+id/rl_text_message"
@@ -83,7 +83,7 @@
                 android:textSize="@dimen/_12sdp" />
         </RelativeLayout>
 
-        <com.google.android.material.card.MaterialCardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/cv_image"
             android:layout_width="@dimen/_150sdp"
             android:layout_height="@dimen/_150sdp"
@@ -102,9 +102,9 @@
                 android:background="@drawable/profile_picture_bg"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_profile_filled" />
-        </com.google.android.material.card.MaterialCardView>
+        </androidx.cardview.widget.CardView>
 
-        <com.google.android.material.card.MaterialCardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/cv_product"
             android:layout_width="@dimen/_180sdp"
             android:layout_height="@dimen/_50sdp"
@@ -160,7 +160,7 @@
                     android:textStyle="bold" />
 
             </RelativeLayout>
-        </com.google.android.material.card.MaterialCardView>
+        </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
 

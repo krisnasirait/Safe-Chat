@@ -12,6 +12,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
@@ -101,8 +102,8 @@ class ChatActivity : AppCompatActivity() {
         alertDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         alertDialog.show()
 
-        val pictureCv = dialogView.findViewById<MaterialButton>(R.id.picture_cv)
-        val documentCV = dialogView.findViewById<MaterialButton>(R.id.doc_cv)
+        val pictureCv = dialogView.findViewById<AppCompatButton>(R.id.picture_cv)
+        val documentCV = dialogView.findViewById<AppCompatButton>(R.id.doc_cv)
 
         pictureCv.setOnClickListener {
             check = false
