@@ -1,14 +1,24 @@
 package com.primetech.safechat.chat.adapter
 
 import android.annotation.SuppressLint
-import android.app.Dialog
+import android.content.Intent
+import android.net.Uri
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.cardview.widget.CardView
+import androidx.core.content.FileProvider
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.primetech.safechat.R
 import com.primetech.safechat.db.Chat
+import java.io.File
+import java.util.*
 
 
 class  MessageAdapter(
@@ -38,12 +48,52 @@ class  MessageAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        var message = messageList[position]
-        holder.tvMessage.text = message.Message
+        val message = messageList[position]
+        when (message.form) {
+            "message" -> {
+                holder.rlTextMessage.isVisible = true
+                holder.cvImage.isVisible = false
+                holder.cvVideoDetail.isVisible = false
+                holder.tvMessage.text = message.Message
+            }
+            "image" -> {
+                holder.rlTextMessage.isVisible = false
+                holder.cvImage.isVisible = true
+                holder.cvVideoDetail.isVisible = false
+
+                Glide.with(holder.itemView.context)
+                    .load(message.Message)
+                    .into(holder.ivMessage)
+            }
+            else -> {
+                holder.rlTextMessage.isVisible = false
+                holder.cvImage.isVisible = false
+                holder.cvVideoDetail.isVisible = true
+                holder.tvTitle.text = UUID.randomUUID().toString()
+            }
+        }
+
+        holder.cvVideoDetail.setOnClickListener {
+            openFile(holder,message.Message)
+        }
+
     }
 
     override fun getItemCount(): Int {
         return messageList.size
+    }
+
+    private fun openFile(holder: ViewHolder, path: String){
+        val file = File(path)
+        val intent = Intent(Intent.ACTION_VIEW) //
+            .setDataAndType(if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) FileProvider.getUriForFile(
+                holder.itemView.context,
+                "com.instances.safechat.fileprovider",
+                file) else Uri.fromFile(file),
+                "*/*")
+            .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            .setClassName("com.android.chrome", "com.google.android.apps.chrome.Main")
+        holder.itemView.context.startActivity(intent)
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -55,5 +105,10 @@ class  MessageAdapter(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvMessage: TextView = itemView.findViewById(R.id.tv_message)
+        var rlTextMessage: RelativeLayout = itemView.findViewById(R.id.rl_text_message)
+        var cvImage: CardView = itemView.findViewById(R.id.cv_image)
+        var cvVideoDetail: CardView = itemView.findViewById(R.id.cv_document)
+        var ivMessage: ImageView = itemView.findViewById(R.id.iv_message)
+        var tvTitle: TextView = itemView.findViewById(R.id.tv_title)
     }
 }
