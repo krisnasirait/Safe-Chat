@@ -85,7 +85,7 @@ class DecryptionActivity : AppCompatActivity() {
 
         if(decryptionMessage != null) {
             val encryptedReply =
-                if (decryptionMessage.contains("com.instances.safechat") && decryptionMessage.contains(
+                if (decryptionMessage.contains("com.primetech.safechat") && decryptionMessage.contains(
                         ".jpg")
                 ) {
                     Chat(type = 0, form = IMAGE, decryptionMessage)

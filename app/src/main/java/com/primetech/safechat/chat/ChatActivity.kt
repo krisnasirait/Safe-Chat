@@ -9,6 +9,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -16,10 +17,9 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.button.MaterialButton
 import com.google.android.material.snackbar.Snackbar
-import com.primetech.safechat.chat.adapter.MessageAdapter
 import com.primetech.safechat.R
+import com.primetech.safechat.chat.adapter.MessageAdapter
 import com.primetech.safechat.databinding.ActivityChatBinding
 import com.primetech.safechat.db.Chat
 import com.primetech.safechat.db.Database
@@ -105,8 +105,8 @@ class ChatActivity : AppCompatActivity() {
         alertDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         alertDialog.show()
 
-        val pictureCv = dialogView.findViewById<MaterialButton>(R.id.picture_cv)
-        val documentCV = dialogView.findViewById<MaterialButton>(R.id.doc_cv)
+        val pictureCv = dialogView.findViewById<Button>(R.id.picture_cv)
+        val documentCV = dialogView.findViewById<Button>(R.id.doc_cv)
 
         pictureCv.setOnClickListener {
             check = false

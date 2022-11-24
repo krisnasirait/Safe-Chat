@@ -88,11 +88,11 @@ class  DecryptionMessageAdapter(
         val intent = Intent(Intent.ACTION_VIEW)
             .setDataAndType(if (VERSION.SDK_INT >= VERSION_CODES.N) FileProvider.getUriForFile(
                 holder.itemView.context,
-                "com.instances.safechat.fileprovider",
+                "com.primetech.safechat.fileprovider",
                 file) else Uri.fromFile(file),
                 "*/*")
             .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            .setClassName("com.android.chrome", "com.google.android.apps.chrome.Main")
+            .setClassName("com.android.chrome", "com.android.browser.BrowserActivity")
         holder.itemView.context.startActivity(intent)
     }
 
