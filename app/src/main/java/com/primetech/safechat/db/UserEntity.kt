@@ -9,7 +9,8 @@ data class UserEntity (
     var userName: String,
     var email: String,
     var password: String,
-    var chatList: String? = null
+    var chatList: String? = null,
+    var decryptionChatList: String? = null
     )
 
 data class Chat(

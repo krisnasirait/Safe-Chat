@@ -22,9 +22,9 @@ import java.io.File
 import java.util.*
 
 
-class  MessageAdapter(
+class  DecryptionMessageAdapter(
     var messageList: ArrayList<Chat>,
-) : RecyclerView.Adapter<MessageAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<DecryptionMessageAdapter.ViewHolder>() {
 
     private val MESSAGE = "message"
     private val DOCUMENT = "document"
