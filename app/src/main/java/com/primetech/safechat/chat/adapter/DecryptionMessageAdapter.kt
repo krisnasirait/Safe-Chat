@@ -27,7 +27,6 @@ class  DecryptionMessageAdapter(
 ) : RecyclerView.Adapter<DecryptionMessageAdapter.ViewHolder>() {
 
     private val MESSAGE = "message"
-    private val DOCUMENT = "document"
     private val IMAGE = "image"
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

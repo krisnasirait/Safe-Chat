@@ -54,24 +54,28 @@ class  MessageAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val message = messageList[position]
-        if (message.form == MESSAGE){
-            holder.rlTextMessage.isVisible = true
-            holder.cvImage.isVisible = false
-            holder.cvVideoDetail.isVisible = false
-            holder.tvMessage.text = message.Message
-        }else if (message.form == IMAGE){
-            holder.rlTextMessage.isVisible = false
-            holder.cvImage.isVisible = true
-            holder.cvVideoDetail.isVisible = false
+        when (message.form) {
+            MESSAGE -> {
+                holder.rlTextMessage.isVisible = true
+                holder.cvImage.isVisible = false
+                holder.cvVideoDetail.isVisible = false
+                holder.tvMessage.text = message.Message
+            }
+            IMAGE -> {
+                holder.rlTextMessage.isVisible = false
+                holder.cvImage.isVisible = true
+                holder.cvVideoDetail.isVisible = false
 
-            Glide.with(holder.itemView.context)
-                .load(message.Message)
-                .into(holder.ivMessage)
-        }else{
-            holder.rlTextMessage.isVisible = false
-            holder.cvImage.isVisible = false
-            holder.cvVideoDetail.isVisible = true
-            holder.tvTitle.text = UUID.randomUUID().toString()
+                Glide.with(holder.itemView.context)
+                    .load(message.Message)
+                    .into(holder.ivMessage)
+            }
+            else -> {
+                holder.rlTextMessage.isVisible = false
+                holder.cvImage.isVisible = false
+                holder.cvVideoDetail.isVisible = true
+                holder.tvTitle.text = UUID.randomUUID().toString()
+            }
         }
 
         holder.cvVideoDetail.setOnClickListener {

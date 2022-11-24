@@ -85,7 +85,7 @@ class DecryptionActivity : AppCompatActivity() {
 
         if(decryptionMessage != null) {
             val encryptedReply =
-                if (decryptionMessage!!.contains("com.instances.safechat") && decryptionMessage.contains(
+                if (decryptionMessage.contains("com.instances.safechat") && decryptionMessage.contains(
                         ".jpg")
                 ) {
                     Chat(type = 0, form = IMAGE, decryptionMessage)
@@ -118,7 +118,7 @@ class DecryptionActivity : AppCompatActivity() {
             // convert chat list into json string
             val jsonChatList = BaseUtils.fromGsonToJson(chatList)
             // encrypt the json string
-            var encryptedChatList = BaseUtils.encrypt(jsonChatList!!)
+            val encryptedChatList = BaseUtils.encrypt(jsonChatList!!)
             // save chat into db
             user.decryptionChatList = encryptedChatList
             userDao.updateUser(user)
