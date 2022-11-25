@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Safe Chat</string>
+    <string name="str_email_address">Email Address</string>
+    <string name="str_password">Password</string>
+    <string name="str_log_in">Login</string>
+    <string name="str_don_t_have_an_account">Don\'t have an account?</string>
+    <string name="str_signup">SignUp</string>
+    <string name="str_create_new_account">Create New Account</string>
+    <string name="str_login_to_your_account">Login to your Account</string>
+    <string name="str_username">Username</string>
+    <string name="str_already_have_an_account">Already have an account?</string>
+    <string name="str_messages">Messages</string>
+    <string name="str_logout">Logout</string>
+    <string name="str_type_your_message_here">Type message here</string>
+    <string name="str_no_recent_message">No Recent Message</string>
+    <string name="str_clear">Clear</string>
+    <string name="permission_required">Permission required for app to work properly</string>
+    <string name="str_ok">OK</string>
 </resources>

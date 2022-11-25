@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.RegisterActivity"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/titleLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's sign you in."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/bright_blue"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/textWelcomeBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your privacy,"
+        android:textColor="@color/bright_blue"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textMissed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Is our priority!"
+        android:textSize="16sp"
+        android:textColor="@color/bright_blue" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:maxLines="1"
+        android:textColorHint="@color/black"
+        android:inputType="textCapSentences"
+        android:background="@drawable/bg_auth"
+        app:layout_constraintTop_toBottomOf="@id/textMissed"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:maxLines="1"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/bg_auth"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:background="@drawable/bg_auth"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/tvPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password do not match"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have an account?"
+            android:textColor="@color/black"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginStart="5dp"
+            android:textSize="12sp"
+            android:textColor="@color/bright_blue"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/dark_blue"
+        android:background="@drawable/bg_button_login"
+        android:layout_marginTop="30dp" />
+
+
+
+</LinearLayout>

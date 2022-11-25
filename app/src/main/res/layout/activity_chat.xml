@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chat.ChatActivity">
+
+    <ProgressBar
+        android:id="@+id/main_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/dark_blue"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_user_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@drawable/ic_chat_bg">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="todo"
+            android:focusable="true"
+            android:padding="@dimen/_7sdp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_45sdp"
+            android:src="@drawable/img_profile" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_85sdp"
+            android:text="Encryption Man"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/cv_message"
+        android:layout_below="@id/rl_user_detail"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="0.5dp" />
+
+    <TextView
+        android:id="@+id/tv_no_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="@dimen/_14ssp"
+        android:text="@string/str_no_recent_message"
+        android:layout_centerInParent="true" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardElevation="0dp"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_20sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F0F0F0"
+            android:padding="@dimen/_3sdp">
+
+            <ImageView
+                android:id="@+id/iv_select_image"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/img_add_image_message"
+                app:tint="@color/black" />
+
+            <EditText
+                android:id="@+id/et_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_40sdp"
+                android:background="#F0F0F0"
+                android:hint="@string/str_type_your_message_here"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                tools:ignore="Autofill" />
+            <ImageView
+                android:id="@+id/iv_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_send"
+                app:tint="@color/black" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
